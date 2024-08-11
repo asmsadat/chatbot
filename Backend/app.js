@@ -1,5 +1,3 @@
-// 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
-
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -34,7 +32,7 @@ app.post("/ask", async (req, res) => {
     // Request a completion from OpenAI based on the updated conversation history
     const completion = await openai.chat.completions.create({
       messages: conversationHistory,
-      model: "gpt-4o",
+      model: "gpt-3.5-turbo",
     });
 
     // Extract the response
